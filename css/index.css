@@ -1,1 +1,275 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: #ECEBE4;
+}
+/*Variables */
+@font-face {
+  font-family: 'Abel';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Abel Regular'), local('Abel-Regular'), url(https://fonts.gstatic.com/s/abel/v10/MwQ5bhbm2POE2V9BOA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v7/Yq6R-LCAWCX3-6Ky7FAFrOF6lw.ttf) format('truetype');
+}
+/*mix-ins */
+/* Styling */
+.container {
+  line-height: 1.5;
+  padding: 3%;
+  font-family: 'Abel', sans-serif;
+}
+@media (max-width 500px) {
+  .container {
+    display: flex;
+    flex-flow: column none;
+    justify-content: center;
+    background-color: #114B5F;
+  }
+}
+.container .header {
+  display: flex;
+  flex-flow: row none;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .header .nav {
+  display: flex;
+  flex-flow: row none;
+  justify-content: space-between;
+  width: 100%0%;
+}
+.container .header .nav a {
+  display: flex;
+  flex-flow: row none;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #ECEBE4;
+  font-family: 'Abel', sans-serif;
+  background-color: #114B5F;
+}
+.container .header .nav a:hover {
+  text-decoration: underline;
+}
+.container .header .nav a:visited {
+  text-decoration: none;
+}
+.container h1 {
+  color: #0C2A31;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 3rem;
+}
+.container .headshot {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+.container section {
+  border-top: 1px solid #0C2A31;
+  background-color: #ECEBE4;
+}
+.container section .content {
+  width: 100%;
+  display: flex;
+  flex-flow: row none;
+  justify-content: space-between;
+}
+.container section .text {
+  padding: 3%;
+  width: 45%;
+}
+.container section .table {
+  width: 75%;
+  padding: 2%;
+}
+.container section .table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.container section .table .tg {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.container section .table td {
+  font-family: 'Abel', sans-serif;
+  font-size: 1.4rem;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #114B5F;
+}
+.container section .table th {
+  font-family: 'Abel', sans-serif;
+  font-size: 1.4rem;
+  font-weight: normal;
+  background-color: #114B5F;
+  color: #ECEBE4;
+  padding: 10px 5px;
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  word-break: normal;
+  border-color: #114B5F;
+}
+.container section .table .tg-fymr {
+  font-weight: bold;
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+.container section .table .tg-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top;
+}
+.container section h2 {
+  color: #114B5F;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.5rem;
+}
+.container footer {
+  display: flex;
+  flex-flow: row none;
+  justify-content: space-between;
+  padding: 2%;
+  text-align: center;
+}
