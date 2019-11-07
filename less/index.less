@@ -54,6 +54,89 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: @background-color;
 }
 
+/*Variables */ 
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Fjalla+One&display=swap');
+
+@main-font: #3F6083;
+@heading-color: #0C2A31;
+@font-color: #171219;
+@accent-color: #114B5F;
+@background-color: #ECEBE4;
+
+@header-font: 'Fjalla One', sans-serif;
+@text-font: 'Abel', sans-serif;
+
+
+/* Styling */
+
+.container {
+	line-height: 1.5;
+
+	.flex {
+		display: flex;
+		flex-flow: row none;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	p { color: @font-color;
+		font-family: @text-font;
+	}
+
+	@media (max-width 900px){
+		background-color: @accent-color;
+	}
+
+	.header {
+		width: 100%;
+		background-color: @accent-color;
+		.flex();
+
+		.nav {
+			a { .flex(); 
+				text-decoration: none;
+				color: @accent-color;
+				font-family: @text-font;
+			}
+
+			a:hover a:visited {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	h1 {
+		color: @heading-color;
+		font-family: @header-font;
+		font-size: 3rem; 
+	}
+
+	section {
+
+		.content {
+			width: 100%;
+			.flex();
+		}
+
+		.text {
+			width: 45%;
+			padding: 3%;
+		}
+
+		.table {
+			width: 75%;
+			tr:nth-child(even) {background-color: #f2f2f2;}
+		}
+
+		h2 {
+			color: @heading-color;
+			font-family: @header-font;
+			font-size: 1.5rem;
+		}
+	}	
+}
